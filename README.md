@@ -7,4 +7,4 @@ bulk2sc is a machine learning model based on a Gaussian mixed variational autoen
 This repository aims to demonstrate bulk2sc operation using scRNA-seq data [GSE130148](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE130148).
 
 ### Fig.2 Procedures and operation order
-<img src="fig/Figure2_operation_procedure_dependency.png" width="50%" alt="Procedures and dependency">
+<img src="fig/Figure2_operation_procedure_dependency.png" width="55%" alt="Procedures and dependency">
