@@ -16,3 +16,4 @@ The GMVAE model (Part I in Fig. 1) requires a scRNA-seq raw count table in Matri
 <img src="fig/Figure2_operation_procedure_dependency.png" width="55%" alt="Procedures and dependency">
 
 #### Fig.2 Procedures and operation order
+Running scripts in `_0_`, `_1_`, and `_2_` will prepare all necessary data for GMVAE and `scTAPE` training.
