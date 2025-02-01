@@ -12,6 +12,7 @@ The bulk2sc model is a machine learning tool based on a Gaussian mixed variation
 The GMVAE model requires a scRNA-seq raw count table in Matrix Market exchange format (MTX file) along with the corresponding cluster (cell type) data in a CSV file. scTAPE utilizes the scRNA-seq raw count table as a dense matrix, with the cluster data as the row index. Additionally, TPM-normalized bulk data is needed to accompany the single-cell data.
 
 <span style="color:blue">some *blue* text</span>.
+<span style="background-color:gray">gray background</span>
 
 ### Fig.2 Procedures and operation order
 <img src="fig/Figure2_operation_procedure_dependency.png" width="55%" alt="Procedures and dependency">
