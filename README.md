@@ -14,5 +14,5 @@ The `bulk2sc` model is made up of three main components (Fig. 1):
 <img src="fig/Figure2_operation_procedure_dependency.png" width="55%" alt="Procedures and dependency">
 
 #### Fig.2 Procedures and operation order
-The GMVAE model (Part I in Fig. 1) requires a scRNA-seq raw count table in Matrix Market exchange format (MTX file) along with the corresponding cluster (cell type) data in a CSV file. The [`scTAPE`](https://sctape.readthedocs.io/)(Part II in Fig. 1) utilizes the scRNA-seq raw count table as a dense matrix, with the cluster data as the row index. Additionally, TPM-normalized bulk data is needed to accompany the single-cell data.
+The GMVAE model (Part I in Fig. 1) requires a scRNA-seq raw count table in Matrix Market exchange format (MTX file) along with the corresponding cluster (cell type) data in a CSV file. The [`scTAPE`](https://sctape.readthedocs.io/)(Part II in Fig. 1) utilizes the scRNA-seq raw count table as a dense matrix, with the cluster data as the row index. The column names are gene names. Additionally, TPM-normalized bulk data is needed to accompany the single-cell data.
 Running scripts in `_0_`, `_1_`, and `_2_` will prepare all necessary data for GMVAE and `scTAPE` training. The downloaded data will be split into a train data set and a test data set in separate folders for the GMVAE training. The 
