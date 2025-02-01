@@ -6,4 +6,4 @@
 bulk2sc is a machine learning model based on a Gaussian mixed variational autoencoder that generates scRNA-seq data from bulk RNA-seq data. 
 This repository aims to demonstrate bulk2sc operation using scRNA-seq data [GSE130148](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE130148).
 
-<img src="fig/Figure2_operation_procedure_dependency.png" width="80%" alt="Procedures and dependency">
+<img src="fig/Figure2_operation_procedure_dependency.png" width="40%" alt="Procedures and dependency">
