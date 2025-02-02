@@ -21,3 +21,9 @@ Given a TPM-normalized bulk RNA-seq dataset, script `_5_` generates synthetic sc
 <img src="fig/Figure3_results_umaps.png" width="70%" alt="Image description">
 
 #### Fig.3 scTAPE predicted vs true proportion. UMAPs of original test data vs generated data using predicted proportion.
+
+Write something here.
+
+<img src="fig/Figure4_gene_correlation.png" width="70%" alt="Image description">
+
+#### Fig.4 Gene correlation in original data vs generated data.
