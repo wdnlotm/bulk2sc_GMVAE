@@ -19,3 +19,5 @@ Running scripts in `_0_` and `_1_` will prepare all necessary data for GMVAE tra
 Given a TPM-normalized bulk RNA-seq dataset, script `_5_` generates synthetic scRNA-seq data for any desired cell count. For comparison, the script also accepts scRNA-seq data, computes pseudo-bulk data, and returns a synthetic scRNA-seq dataset with a matching total number of cells.
 
 <img src="fig/Figure3_results_umaps.png" width="70%" alt="Image description">
+
+#### Fig.3 scTAPE predicted vs true proportion. UMAPs of original test data vs generated data using predicted proportion.
