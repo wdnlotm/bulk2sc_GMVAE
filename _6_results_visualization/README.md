@@ -3,6 +3,7 @@
 from visualize_results import *
 cluster_file1="../_1_data_process_for_GMVAE/test/cluster_lung_test.csv"
 cluster_file2="../_5_scRNA_generation/cluster_generated_using_test_data.csv"
+
 plot_proportions('original', cluster_file1, 'generated', cluster_file2)
 ```
 <img src="fig/original_v_generated_proportion.png" width="30%" alt="Image description">
@@ -18,6 +19,7 @@ cluster_file1="../_1_data_process_for_GMVAE/test/cluster_lung_test.csv"
 count_file2="../_5_scRNA_generation/matrix_generated_using_test_data.mtx"
 genename_file2="../_1_data_process_for_GMVAE/test/genes_lung_test.tsv" #same as data 1
 cluster_file2="../_5_scRNA_generation/cluster_generated_using_test_data.csv"
+
 plot_umaps('original', count_file1, genename_file1, cluster_file1, 
            'generated', count_file2, genename_file2, cluster_file2)
 ```
