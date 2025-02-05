@@ -1,8 +1,11 @@
 ## Generate using saved models and the test data.
+First, functions in the source codes are loaded.
 ```
 from scTAPE_predictor_by_modelpt import *
 from GMVAE_generate_by_modelpt import *
 ```
+The scripts below will
+1. make a pseudo-bulk RNA-seq data from scRNA-seq data, `scrna_file`, the in test data.
 ```
 modelpt="../_4_model_train_scTAPE/model_640_600_15000_1200_0.85_ver3.pt"
 geneleng='../_4_model_train_scTAPE/GeneLength.txt'
