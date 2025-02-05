@@ -15,3 +15,7 @@ pred_prop, cell_count = predicted_proportion_by_TAPE_model(modelfile=modelpt,
                                    intersect_gene=intersect_list, 
                                    scrna=scrna_file, cellcounts=None)
 ```
+```
+cell_counts = [round(x) for x in pred_prop*cell_count]
+print(cell_counts)
+```
