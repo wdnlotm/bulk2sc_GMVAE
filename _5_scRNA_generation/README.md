@@ -19,3 +19,4 @@ pred_prop, cell_count = predicted_proportion_by_TAPE_model(modelfile=modelpt,
 cell_counts = [round(x) for x in pred_prop*cell_count]
 print(cell_counts)
 ```
+The result of `cell_counts` print is [347, 194, 86, 156, 300, 78, 421, 153, 77, 77, 198, 49, 45, 151, 82, 54, 80].
