@@ -26,8 +26,6 @@ cell_counts = [round(x) for x in pred_prop*cell_count]
 print(cell_counts)
 ```
 The result of printing `cell_counts` is [347, 194, 86, 156, 300, 78, 421, 153, 77, 77, 198, 49, 45, 151, 82, 54, 80].
-## Generate from one bulk RNA-seq data.
-### Coming soon.
 
 Executing the scripts below will generate scRNA-seq data following the cell counts in `cell_counts` using the `modelfile`. 
 The results will be saved as `matrix_generated_using_test_data.mtx` and `cluster_generated_using_test_data.csv` following the `suffix`.
@@ -35,3 +33,5 @@ The results will be saved as `matrix_generated_using_test_data.mtx` and `cluster
 modelfile="../_3_model_train_GMVAE/saved_model_for_quick_demo/lung_GMVAE_zinb_ep4000_wholemodel.pt"
 generate_from_pt_cellcounts(modelfile, cell_counts, suffix="generated_using_test_data")
 ```
+## Generate from one bulk RNA-seq data.
+### Coming soon.
