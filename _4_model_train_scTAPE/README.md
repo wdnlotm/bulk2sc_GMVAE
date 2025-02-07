@@ -3,3 +3,20 @@
 ```
 pip install dist/scTAPE_for_bulk2scGMVAE-0.1-py3-none-any.whl
 ```
+Inputs for `scTAPE` training are
+```
+import scTAPE_for_bulk2scGMVAE
+from scTAPE_for_bulk2scGMVAE import Deconvolution
+import pandas as pd
+import os
+
+Sigm, Pred = Deconvolution(data_dir+train_file, data_dir+bulk_sample_file, sep='\t',scaler='mms',
+                                   datatype='TPM', genelenfile=data_dir+gene_len_file, 
+                                   mode='overall', adaptive=False, variance_threshold=variance_threshold_input,
+                                   save_model_name = model_name, batch_size=batch_size_input, epochs=epoch_input,
+                                  samplenumber=samplenumber_input, sampling_num=sampling_num_input, 
+                                   seed=epoch_input+samplenumber_input)
+
+
+
+```
