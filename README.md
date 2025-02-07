@@ -1,6 +1,6 @@
 # bulk2sc_GMVAE
 
-<img src="fig/scRNAGMVAE.png" width="80%" alt="Image description">
+<img src="fig/scRNAGMVAE2.png" width="80%" alt="Image description">
 
 #### Fig.1 Model schematic diagram
 
