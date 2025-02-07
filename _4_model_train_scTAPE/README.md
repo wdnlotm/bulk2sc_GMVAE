@@ -3,7 +3,7 @@
 ```
 pip install dist/scTAPE_for_bulk2scGMVAE-0.1-py3-none-any.whl
 ```
-Inputs for `scTAPE` training are
+Inputs for `scTAPE` training are ... *write more here*
 ```
 import scTAPE_for_bulk2scGMVAE
 from scTAPE_for_bulk2scGMVAE import Deconvolution
