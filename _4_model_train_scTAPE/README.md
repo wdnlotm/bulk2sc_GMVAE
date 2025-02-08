@@ -3,7 +3,13 @@
 ```
 pip install dist/scTAPE_for_bulk2scGMVAE-0.1-py3-none-any.whl
 ```
-Inputs for `scTAPE` training are ... *write more here*
+Inputs for `scTAPE` training are 
+```
+train_file='../_2_data_process_for_scTAPE/lung_data_to_train_scTAPE_from_lung_train.txt'
+bulk_sample_file='../_2_data_process_for_scTAPE/lung_pseudo_bulk_tpm_5samples.txt'
+gene_len_file='./GeneLength.txt'
+```
+
 ```
 import scTAPE_for_bulk2scGMVAE
 from scTAPE_for_bulk2scGMVAE import Deconvolution
