@@ -9,7 +9,7 @@ train_file='../_2_data_process_for_scTAPE/lung_data_to_train_scTAPE_from_lung_tr
 bulk_sample_file='../_2_data_process_for_scTAPE/lung_pseudo_bulk_tpm_5samples.txt'
 gene_len_file='./GeneLength.txt'
 ```
-With these input files and other hyperparameters, the following scripts will train a `scTAPE` model and save a model in a `.pt` file, save the gene list that is used in the `scTAPE` model.  
+With these input files and other hyperparameters, the following scripts will train a `scTAPE` model and save a model in a `.pt` file, save the gene list that is used in the saved `scTAPE` model.  
 ```
 import scTAPE_for_bulk2scGMVAE
 from scTAPE_for_bulk2scGMVAE import Deconvolution
