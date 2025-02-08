@@ -3,13 +3,13 @@
 ```
 pip install dist/scTAPE_for_bulk2scGMVAE-0.1-py3-none-any.whl
 ```
-Inputs for `scTAPE` training are 
+The input files for `scTAPE` training are 
 ```
 train_file='../_2_data_process_for_scTAPE/lung_data_to_train_scTAPE_from_lung_train.txt'
 bulk_sample_file='../_2_data_process_for_scTAPE/lung_pseudo_bulk_tpm_5samples.txt'
 gene_len_file='./GeneLength.txt'
 ```
-
+With these input files and other hyperparameters, the following scripts will train a `scTAPE` model and save a model in a `.pt` file, save the gene list that is used in the `scTAPE` model.  
 ```
 import scTAPE_for_bulk2scGMVAE
 from scTAPE_for_bulk2scGMVAE import Deconvolution
@@ -18,7 +18,4 @@ Sigm, Pred = Deconvolution(scRNA_train_data, bulk_data, sep='\t',scaler='mms',
                            datatype='TPM', genelenfile='Genelength.txt', mode='overall',
                            adaptive=False, variance_threshold=0.85, save_model_name = "_lung_scRNA",
                            batch_size=600, epochs=640, samplenumber=15000, sampling_num=1200, seed=15640)
-
-
-
 ```
