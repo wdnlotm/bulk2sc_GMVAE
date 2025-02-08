@@ -14,7 +14,6 @@ gene_len_file='./GeneLength.txt'
 With these input files and other hyperparameters, the following script will train an `scTAPE` model, save the model in a `.pt` file, save the gene list used in the saved `scTAPE` model.
 
 ```
-import scTAPE_for_bulk2scGMVAE
 from scTAPE_for_bulk2scGMVAE import Deconvolution
 
 Sigm, Pred = Deconvolution(scRNA_train_data, bulk_data, sep='\t',scaler='mms',
