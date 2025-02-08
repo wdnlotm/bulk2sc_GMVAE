@@ -3,15 +3,16 @@
 ```
 pip install dist/scTAPE_for_bulk2scGMVAE-0.1-py3-none-any.whl
 ```
-The packages in the requirements for `bulk2sc` cover all packages required by `scTAPE`.
+The packages listed in the requirements for `bulk2sc` cover all dependencies required by `scTAPE`.
 
-The input files for `scTAPE` training are 
+The input files for scTAPE training are: 
 ```
 train_file='../_2_data_process_for_scTAPE/lung_data_to_train_scTAPE_from_lung_train.txt'
 bulk_sample_file='../_2_data_process_for_scTAPE/lung_pseudo_bulk_tpm_5samples.txt'
 gene_len_file='./GeneLength.txt'
 ```
-With these input files and other hyperparameters, the following scripts will train a `scTAPE` model and save a model in a `.pt` file, save the gene list that is used in the saved `scTAPE` model.  
+With these input files and other hyperparameters, the following script will train an `scTAPE` model, save the model in a `.pt` file, save the gene list used in the saved `scTAPE` model.
+
 ```
 import scTAPE_for_bulk2scGMVAE
 from scTAPE_for_bulk2scGMVAE import Deconvolution
