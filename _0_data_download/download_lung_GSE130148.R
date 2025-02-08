@@ -8,3 +8,6 @@ load("lung_GSE130148.RData")
 writeMM(raw_counts, "matrix_raw_counts.mtx")
 write.table(rownames(raw_counts), file = "genes_from_raw.tsv", row.names=FALSE, sep="\t", col.names=FALSE, quote=FALSE)
 write.table(colnames(raw_counts), file = "barcodes_from_raw.tsv", row.names=FALSE, col.names=FALSE, sep="\t", quote=FALSE)
+
+download.file("https://github.com/poseidonchan/TAPE/raw/main/data/GeneLength.txt", "../_2_data_process_for_scTAPE/GeneLength.txt")
+
