@@ -3,6 +3,8 @@
 ```
 pip install dist/scTAPE_for_bulk2scGMVAE-0.1-py3-none-any.whl
 ```
+The packages in the requirements for `bulk2sc` cover all packages required by `scTAPE`.
+
 The input files for `scTAPE` training are 
 ```
 train_file='../_2_data_process_for_scTAPE/lung_data_to_train_scTAPE_from_lung_train.txt'
@@ -19,3 +21,4 @@ Sigm, Pred = Deconvolution(scRNA_train_data, bulk_data, sep='\t',scaler='mms',
                            adaptive=False, variance_threshold=0.85, save_model_name = "_lung_scRNA",
                            batch_size=600, epochs=640, samplenumber=15000, sampling_num=1200, seed=15640)
 ```
+The file `train_scTAPE.py` has all the other details to run the training.
