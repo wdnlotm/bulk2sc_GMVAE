@@ -20,7 +20,7 @@ Given a TPM-normalized bulk RNA-seq dataset, script `_5_scRNA_generation` genera
 
 #### Fig.3 scTAPE predicted vs true proportion. UMAPs of original test data vs generated data using predicted proportion.
 <img src="fig/Figure3_results_umaps.png" width="50%" alt="Image description">
-The trained models are applied to the test data from the lung data (GSE130148), unseen to these models. Fig.3 has the model results: comparison of the predicted and the true proportions and the comparison of generated and original data through UMAPs. 
+The trained models were applied to the test data from the lung dataset (GSE130148), which had not been seen by these models. Figure 3 presents the model results, including a comparison between the predicted and true proportions, as well as a comparison between the generated and original data using UMAP visualizations.
 
 #### Fig.4 Gene correlation in original data vs generated data.
 <img src="fig/Figure4_gene_correlation.png" width="50%" alt="Image description">
