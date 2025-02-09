@@ -24,5 +24,6 @@ The trained models were applied to the test data from the lung dataset (GSE13014
 
 #### Fig.4 Gene correlation in original data vs generated data.
 <img src="fig/Figure4_gene_correlation.png" width="50%" alt="Image description">
+Fig.4 compares the correlational structure between the original data and the generated data.
 
 
