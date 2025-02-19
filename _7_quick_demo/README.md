@@ -30,3 +30,12 @@ modelfile="./data_for_quick_demo/lung_GMVAE_wholePTmodel.pt" # GMVAE model
 generate_from_pt_cellcounts(modelfile, cell_counts, suffix="lung_generated")
 ```
 The last command will save two files: a raw scRNA-seq count matrix file (`matrix_lung_generated.mtx`) and a cell type information file (`cluster_lung_generated.csv`).
+
+Let's compare the ground truth proportion and the predicted proportion.
+```python
+from visualize_results import *
+cluster_file1="./data_for_quick_demo/cluster_lung_test.csv"  # cell type data just generated
+cluster_file2="./cluster_lung_generated.csv"                 # ground truth cell type data
+
+plot_proportions('original', cluster_file1, 'generated', cluster_file2)
+```
