@@ -7,7 +7,7 @@ from scTAPE_predictor_by_modelpt import *
 
 modelpt="./data_for_quick_demo/model_scTAPE_lung.pt"   #scTAPE model
 geneleng='./data_for_quick_demo/GeneLength.txt'        #gene length for tpm normalization 
-rna_file='./data_for_quick_demo/bulk_data_to_test.txt' # bulk RNA-seq data. one-row data with gene names and column names.
+rna_file='./data_for_quick_demo/bulk_data_to_test.txt' # bulk RNA-seq data. one-row data with gene names as column names.
                                                        # It must be raw count data.
 intersect_list='./data_for_quick_demo/genename_lung.csv'  # gene list that was used in scTAPE training.
 
