@@ -10,7 +10,7 @@ geneleng='./data_for_quick_demo/GeneLength.txt'        #gene length for tpm norm
 
 rna_file='./data_for_quick_demo/bulk_data_to_test.txt' # bulk RNA-seq data. one-row data with gene names and column names.
                                                        # It must be raw count data.
-intersect_list='./data_for_quick_demo/genename_lung.csv'
+intersect_list='./data_for_quick_demo/genename_lung.csv'  # gene list that was used in scTAPE training.
 
 pred_prop, _ = predicted_proportion_by_TAPE_model(modelfile=modelpt, 
                                    genelenfile=geneleng, 
