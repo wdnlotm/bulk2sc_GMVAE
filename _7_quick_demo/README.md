@@ -16,7 +16,16 @@ pred_prop, _ = predicted_proportion_by_TAPE_model(modelfile=modelpt,
                                    intersect_gene=intersect_list, 
                                    rna_data=rna_file)
 ```
-Printing `pred_pror` would proportions like
+Printing `pred_pror` would display proportions like
 ```python
 [0.1361472  0.07620474 0.03358484 0.06110592 0.11792746 0.03078262  0.165271   0.05988612 0.03028877 0.03015646 0.07783207 0.01938615  0.01753762 0.05920918 0.03208745 0.02136544 0.03122693].
+```
+Now, let's generate a total of 2547 cells following the proportions above.
+```python
+from GMVAE_generate_by_modelpt import *
+total_count=2547                                        # total cell count
+cell_counts = [round(x) for x in pred_prop*total_count] # break down to each cell type
+
+modelfile="./data_for_quick_demo/lung_GMVAE_wholePTmodel.pt" # GMVAE model
+generate_from_pt_cellcounts(modelfile, cell_counts, suffix="lung_generated")
 ```
