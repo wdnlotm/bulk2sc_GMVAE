@@ -41,3 +41,19 @@ plot_proportions('original', cluster_file1, 'generated', cluster_file2)
 ```
 The last command will produce the following plot comparing the predicted and true proportions.
 <img src="fig/original_v_generated_proportion_demo.png" width="35%" alt="Image description">
+
+UMAP comparison can be done by following script.
+```python
+from visualize_results import *
+# data 1 - original test data
+count_file1="./data_for_quick_demo/matrix_lung_test.mtx"
+genename_file1="./data_for_quick_demo/genes_lung_test.tsv"
+cluster_file1="./data_for_quick_demo/cluster_lung_test.csv"
+# data 2 - generated from pseudo bulk test data
+count_file2="./matrix_lung_generated.mtx"
+genename_file2="./data_for_quick_demo/genes_lung_test.tsv" #same as data 1
+cluster_file2="./cluster_lung_generated.csv"
+
+plot_umaps('original', count_file1, genename_file1, cluster_file1, 
+           'generated', count_file2, genename_file2, cluster_file2)
+```
