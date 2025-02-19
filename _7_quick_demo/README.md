@@ -39,3 +39,5 @@ cluster_file2="./cluster_lung_generated.csv"                 # ground truth cell
 
 plot_proportions('original', cluster_file1, 'generated', cluster_file2)
 ```
+
+<img src="fig/original_v_generated_proportion_demo.png" width="50%" alt="Image description">
