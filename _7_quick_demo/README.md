@@ -39,7 +39,7 @@ cluster_file2="./cluster_lung_generated.csv"                 # ground truth cell
 
 plot_proportions('original', cluster_file1, 'generated', cluster_file2)
 ```
-The last command will produce the following plot comparing the predicted and true proportions.
+The execution of these commands will produce the following plot comparing the predicted and true proportions.
 <img src="fig/original_v_generated_proportion_demo.png" width="35%" alt="Image description">
 
 UMAP comparison can be done by following script.
@@ -57,5 +57,5 @@ cluster_file2="./cluster_lung_generated.csv"
 plot_umaps('original', count_file1, genename_file1, cluster_file1, 
            'generated', count_file2, genename_file2, cluster_file2)
 ```
-The last command will produce the following plot comparing the predicted and true proportions.
+The execution of these commands will produce several UMAP plots comparing the test data and the data generated from it.
 <img src="fig/original_v_generated_umap_demo.png" width="85%" alt="Image description">
