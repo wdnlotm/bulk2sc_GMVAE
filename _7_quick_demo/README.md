@@ -29,4 +29,4 @@ cell_counts = [round(x) for x in pred_prop*total_count] # break down to each cel
 modelfile="./data_for_quick_demo/lung_GMVAE_wholePTmodel.pt" # GMVAE model
 generate_from_pt_cellcounts(modelfile, cell_counts, suffix="lung_generated")
 ```
-The last command will save two files: a raw scRNA count matrix file (`matrix_lung_generated.mtx`) and a cell type information file (`cluster_lung_generated.csv`).
+The last command will save two files: a raw scRNA-seq count matrix file (`matrix_lung_generated.mtx`) and a cell type information file (`cluster_lung_generated.csv`).
