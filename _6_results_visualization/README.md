@@ -8,6 +8,7 @@ cluster_file2="../_5_scRNA_generation/cluster_generated_using_test_data.csv" #pr
 plot_proportions('original', cluster_file1, 'generated', cluster_file2)
 ```
 Running the above script will produce a scatter plot like this.
+
 <img src="fig/original_v_generated_proportion.png" width="30%" alt="Image description">
 
 ## UMAPs for dataset & cluster
