@@ -19,8 +19,7 @@ The last command in the above script will
 3. trim genes using the gene list used in `scTAPE` training.
 4. produce outputs: `pred_prop`, predicted proportion and `total_count`, the number of cells in the input scRNA-seq data.
 
-Executing the scripts below will generate scRNA-seq data following the cell counts in `cell_counts` using the `modelfile`. 
-The results will be saved as `matrix_generated_using_test_data.mtx` and `cluster_generated_using_test_data.csv` following the `suffix`.
+Subsequently, executing the scripts below generates scRNA-seq data following the cell counts in `cell_counts` using the `modelfile`. The results will be saved as `matrix_generated_using_test_data.mtx` and `cluster_generated_using_test_data.csv` following the `suffix`.
 ```python
 from GMVAE_generate_by_modelpt import *
 cell_counts = [round(x*total_count) for x in pred_prop]  #cell counts in each cell types
