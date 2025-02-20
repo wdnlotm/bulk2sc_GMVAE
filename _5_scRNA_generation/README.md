@@ -34,4 +34,4 @@ modelfile="../_3_model_train_GMVAE/saved_model_for_quick_demo/lung_GMVAE_zinb_ep
 generate_from_pt_cellcounts(modelfile, cell_counts, suffix="generated_using_test_data")
 ```
 ## Generate from one bulk RNA-seq data.
-It is demonstrated in `_7_quick_demo`
+This is demonstrated in `_7_quick_demo`
