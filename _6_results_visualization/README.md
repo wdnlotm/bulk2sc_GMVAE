@@ -12,14 +12,14 @@ Running the above script will produce a scatter plot like this.
 <img src="fig/original_v_generated_proportion.png" width="30%" alt="Image description">
 
 ## UMAPs for dataset & cluster
-Since the trained models are tested on the test data set, the original data and the generated data are compared through UMAP projections.
+Since the trained models are evaluated on the test dataset, the original data and the generated data are compared through UMAP projections.
 ```
 from visualize_results import *
-# data 1
+# original data
 count_file1="../_1_data_process_for_GMVAE/test/matrix_lung_test.mtx"
 genename_file1="../_1_data_process_for_GMVAE/test/genes_lung_test.tsv"
 cluster_file1="../_1_data_process_for_GMVAE/test/cluster_lung_test.csv"
-# data 2
+# generated data
 count_file2="../_5_scRNA_generation/matrix_generated_using_test_data.mtx"
 genename_file2="../_1_data_process_for_GMVAE/test/genes_lung_test.tsv" #same as data 1
 cluster_file2="../_5_scRNA_generation/cluster_generated_using_test_data.csv"
