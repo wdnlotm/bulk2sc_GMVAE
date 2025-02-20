@@ -1,15 +1,11 @@
 # Generate using saved models and test data.
-The scripts below will
-1. make a pseudo-bulk RNA-seq data from scRNA-seq data, `scrna_file`, in the test data.
-2. TPM-normalize using `genelenfile`.
-3. trim genes using the gene list that is used in `scTAPE` training.
-4. produce outputs, `pred_prop`: predicted proportion, `cell_count`: the number of cells in the input scRNA-seq data.
+For comparison purposes, synthetic scRNA-seq data is generated from the scRNA-seq data in the test data set.
 ```python
 from scTAPE_predictor_by_modelpt import *
-modelpt="../_4_model_train_scTAPE/model_640_600_15000_1200_0.85.pt" #scTAPE model
+modelpt="../_4_model_train_scTAPE/model_640_600_15000_1200_0.85.pt" #scTAPE model saved after scTAPE training
 geneleng='../_2_data_process_for_scTAPE/GeneLength.txt'             #gene length for tpm normalization 
-scrna_file='../_2_data_process_for_scTAPE/lung_data_to_train_scTAPE_from_lung_test.txt'
-       # scRNA-seq data from the test dataset. It must be raw count data.
+rna_file='../_2_data_process_for_scTAPE/lung_data_to_train_scTAPE_from_lung_test.txt' #scRNA-seq in the test data
+                                                                                      #It is a raw count data.
 intersect_list='../_4_model_train_scTAPE/genename_640_600_15000_1200_0.85.csv' # gene list that was used in scTAPE training.
 
 pred_prop, cell_count = predicted_proportion_by_TAPE_model(modelfile=modelpt, 
@@ -17,6 +13,12 @@ pred_prop, cell_count = predicted_proportion_by_TAPE_model(modelfile=modelpt,
                                    intersect_gene=intersect_list, 
                                    scrna=scrna_file)
 ```
+The last command in the below will
+1. make a pseudo-bulk RNA-seq data from scRNA-seq data, `rna_file`, in the test data.
+2. TPM-normalize using `genelenfile`.
+3. trim genes using the gene list that is used in `scTAPE` training.
+4. produce outputs, `pred_prop`: predicted proportion, `cell_count`: the number of cells in the input scRNA-seq data.
+
 ```
 cell_counts = [round(x) for x in pred_prop*cell_count]
 print(cell_counts)
