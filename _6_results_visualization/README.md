@@ -27,7 +27,7 @@ cluster_file2="../_5_scRNA_generation/cluster_generated_using_test_data.csv"
 plot_umaps('original', count_file1, genename_file1, cluster_file1, 
            'generated', count_file2, genename_file2, cluster_file2)
 ```
-<img src="fig/umap_datasets.png" width="75%" alt="Image description">
+<img src="fig/original_v_generated_umap_demo.png" width="75%" alt="Image description">
 
-<img src="fig/umap_clusters.png" width="85%" alt="Image description">
+<img src="fig/original_v_generated_umap_cluster_demo.png" width="85%" alt="Image description">
 
