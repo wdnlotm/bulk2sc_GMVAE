@@ -11,16 +11,16 @@ The scripts below will
 4. produce outputs, `pred_prop`: predicted proportion, `cell_count`: the number of cells in the input scRNA-seq data.
 ```python
 from scTAPE_predictor_by_modelpt import *
-modelpt="../_4_model_train_scTAPE/model_640_600_15000_1200_0.85.pt"
-geneleng='../_4_model_train_scTAPE/GeneLength.txt'
-
+modelpt="../_4_model_train_scTAPE/model_640_600_15000_1200_0.85.pt" #scTAPE model
+geneleng='../_2_data_process_for_scTAPE/GeneLength.txt'             #gene length for tpm normalization 
 scrna_file='../_2_data_process_for_scTAPE/lung_data_to_train_scTAPE_from_lung_test.txt'
-intersect_list='../_4_model_train_scTAPE/genename_640_600_15000_1200_0.85_ver3.csv'
+       # scRNA-seq data from the test dataset. It must be raw count data.
+intersect_list='../_4_model_train_scTAPE/genename_640_600_15000_1200_0.85.csv' # gene list that was used in scTAPE training.
 
 pred_prop, cell_count = predicted_proportion_by_TAPE_model(modelfile=modelpt, 
                                    genelenfile=geneleng, 
                                    intersect_gene=intersect_list, 
-                                   scrna=scrna_file, cellcounts=None)
+                                   scrna=scrna_file)
 ```
 ```
 cell_counts = [round(x) for x in pred_prop*cell_count]
