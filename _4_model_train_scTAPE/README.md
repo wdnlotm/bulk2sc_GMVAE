@@ -3,7 +3,7 @@
 ```
 pip install dist/scTAPE_for_bulk2scGMVAE-0.1-py3-none-any.whl
 ```
-The packages listed in the requirements for `bulk2sc` cover all dependencies required by `scTAPE`.
+The packages listed in the requirements for `bulk2sc` cover all dependencies required by the modified `scTAPE`.
 
 The input files for scTAPE training are: 
 ```
