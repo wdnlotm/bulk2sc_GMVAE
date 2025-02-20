@@ -9,8 +9,9 @@ The scripts below will
 2. TPM-normalize using `genelenfile`.
 3. trim genes using the gene list that is used in `scTAPE` training.
 4. produce outputs, `pred_prop`: predicted proportion, `cell_count`: the number of cells in the input scRNA-seq data.
-```
-modelpt="../_4_model_train_scTAPE/model_640_600_15000_1200_0.85_ver3.pt"
+```python
+from scTAPE_predictor_by_modelpt import *
+modelpt="../_4_model_train_scTAPE/model_640_600_15000_1200_0.85.pt"
 geneleng='../_4_model_train_scTAPE/GeneLength.txt'
 
 scrna_file='../_2_data_process_for_scTAPE/lung_data_to_train_scTAPE_from_lung_test.txt'
