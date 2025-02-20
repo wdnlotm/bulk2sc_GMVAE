@@ -1,9 +1,4 @@
 # Generate using saved models and test data.
-
-```
-from scTAPE_predictor_by_modelpt import *
-from GMVAE_generate_by_modelpt import *
-```
 The scripts below will
 1. make a pseudo-bulk RNA-seq data from scRNA-seq data, `scrna_file`, in the test data.
 2. TPM-normalize using `genelenfile`.
