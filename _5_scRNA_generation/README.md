@@ -1,5 +1,5 @@
 # Generate using saved models and test data.
-First, functions in the source codes are loaded.
+
 ```
 from scTAPE_predictor_by_modelpt import *
 from GMVAE_generate_by_modelpt import *
@@ -30,7 +30,8 @@ The result of printing `cell_counts` is [347, 194, 86, 156, 300, 78, 421, 153, 7
 
 Executing the scripts below will generate scRNA-seq data following the cell counts in `cell_counts` using the `modelfile`. 
 The results will be saved as `matrix_generated_using_test_data.mtx` and `cluster_generated_using_test_data.csv` following the `suffix`.
-```
+```python
+from GMVAE_generate_by_modelpt import *
 modelfile="../_3_model_train_GMVAE/saved_model_for_quick_demo/lung_GMVAE_zinb_ep4000_wholemodel.pt"
 generate_from_pt_cellcounts(modelfile, cell_counts, suffix="generated_using_test_data")
 ```
