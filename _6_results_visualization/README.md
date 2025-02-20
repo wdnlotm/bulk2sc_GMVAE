@@ -30,4 +30,3 @@ plot_umaps('original', count_file1, genename_file1, cluster_file1,
 <img src="fig/original_v_generated_umap_demo.png" width="75%" alt="Image description">
 
 <img src="fig/original_v_generated_umap_cluster_demo.png" width="85%" alt="Image description">
-
