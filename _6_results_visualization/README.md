@@ -27,7 +27,8 @@ cluster_file2="../_5_scRNA_generation/cluster_generated_using_test_data.csv"
 plot_umaps('original', count_file1, genename_file1, cluster_file1, 
            'generated', count_file2, genename_file2, cluster_file2)
 ```
-This script will illustrate UMAP plots like these.
+This script will illustrate UMAP plots as shown below.
+
 <img src="fig/original_v_generated_umap_demo.png" width="75%" alt="Image description">
 
 <img src="fig/original_v_generated_umap_cluster_demo.png" width="75%" alt="Image description">
