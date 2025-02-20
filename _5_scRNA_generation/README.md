@@ -13,11 +13,11 @@ pred_prop, cell_count = predicted_proportion_by_TAPE_model(modelfile=modelpt,
                                    intersect_gene=intersect_list, 
                                    scrna=scrna_file)
 ```
-The last command in the below will
-1. make a pseudo-bulk RNA-seq data from scRNA-seq data, `rna_file`, in the test data.
-2. TPM-normalize using `genelenfile`.
-3. trim genes using the gene list that is used in `scTAPE` training.
-4. produce outputs, `pred_prop`: predicted proportion, `cell_count`: the number of cells in the input scRNA-seq data.
+The last command in the above script will
+1. create pseudo-bulk RNA-seq data from the scRNA-seq data, `rna_file`, in the test data.
+2. perform TPM-normalization using the `genelenfile`.
+3. trim genes using the gene list used in `scTAPE` training.
+4. produce outputs: `pred_prop`, predicted proportion and `cell_count`, the number of cells in the input scRNA-seq data.
 
 ```
 cell_counts = [round(x) for x in pred_prop*cell_count]
