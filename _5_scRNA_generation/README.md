@@ -1,4 +1,4 @@
-# Generate using saved models and the test data.
+# Generate using saved models and test data.
 First, functions in the source codes are loaded.
 ```
 from scTAPE_predictor_by_modelpt import *
