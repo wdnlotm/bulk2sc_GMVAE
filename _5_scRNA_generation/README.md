@@ -8,7 +8,7 @@ rna_file='../_2_data_process_for_scTAPE/lung_data_to_train_scTAPE_from_lung_test
                                                                                       #It is a raw count data.
 intersect_list='../_4_model_train_scTAPE/genename_640_600_15000_1200_0.85.csv' # gene list that was used in scTAPE training.
 
-pred_prop, cell_count = predicted_proportion_by_TAPE_model(modelfile=modelpt, 
+pred_prop, total_count = predicted_proportion_by_TAPE_model(modelfile=modelpt, 
                                    genelenfile=geneleng, 
                                    intersect_gene=intersect_list, 
                                    scrna=scrna_file)
@@ -17,7 +17,7 @@ The last command in the above script will
 1. create pseudo-bulk RNA-seq data from the scRNA-seq data, `rna_file`, in the test data.
 2. perform TPM-normalization using the `genelenfile`.
 3. trim genes using the gene list used in `scTAPE` training.
-4. produce outputs: `pred_prop`, predicted proportion and `cell_count`, the number of cells in the input scRNA-seq data.
+4. produce outputs: `pred_prop`, predicted proportion and `total_count`, the number of cells in the input scRNA-seq data.
 
 ```
 cell_counts = [round(x) for x in pred_prop*cell_count]
