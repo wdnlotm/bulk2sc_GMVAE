@@ -21,4 +21,4 @@ Sigm, Pred = Deconvolution(scRNA_train_data, bulk_data, sep='\t',scaler='mms',
                            adaptive=False, variance_threshold=0.85, save_model_name = "_lung_scRNA",
                            batch_size=600, epochs=640, samplenumber=15000, sampling_num=1200, seed=15640)
 ```
-The file `train_scTAPE.py` has all the other details to run the training.
+For additional details on running the training, refer to `train_scTAPE.py`.
