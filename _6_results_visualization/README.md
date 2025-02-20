@@ -12,6 +12,7 @@ Running the above script will produce a scatter plot like this.
 <img src="fig/original_v_generated_proportion.png" width="30%" alt="Image description">
 
 ## UMAPs for dataset & cluster
+Since the trained models are tested on the test data set, the original data and the generated data are compared through UMAP projections.
 ```
 from visualize_results import *
 # data 1
