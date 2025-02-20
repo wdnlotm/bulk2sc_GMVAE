@@ -1,4 +1,4 @@
-# Train the scTAPE 
+# Train scTAPE 
 `scTAPE` is used to predict cell type proportions in bulk RNA-seq. However, many hyperparameters are inaccessible through the default interface of the `scTAPE` package. To address this, the source code of `scTAPE` was modified to expose additional hyperparameters, resulting in a new package: `scTAPE_for_bulk2scGMVAE-0.1-py3-none-any.whl`. This modified package can be installed by running the following command in `_4_model_train_scTAPE` directory. 
 ```
 pip install dist/scTAPE_for_bulk2scGMVAE-0.1-py3-none-any.whl
