@@ -23,7 +23,7 @@ Subsequently, executing the scripts below will generate scRNA-seq data based on 
 ```python
 from GMVAE_generate_by_modelpt import *
 cell_counts = [round(x*total_count) for x in pred_prop]  #cell counts in each cell types
-modelfile="../_3_model_train_GMVAE/models/lung_GMVAE_zinb_ep4000_wholemodel.pt" #model saved after the GMVAE training
+modelfile="../_3_model_train_GMVAE/models/lung_zdim_32_bs_37_4000_GMVAE_w_zinb_wholePTmodel.pt" #model saved after the GMVAE training
 generate_from_pt_cellcounts(modelfile, cell_counts, suffix="generated_using_test_data")
 ```
 ## Generate from one bulk RNA-seq data.
