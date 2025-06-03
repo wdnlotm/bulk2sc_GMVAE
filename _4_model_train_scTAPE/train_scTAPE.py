@@ -5,7 +5,7 @@ import os
 
 train_file='../_2_data_process_for_scTAPE/lung_data_to_train_scTAPE_from_lung_train.txt'
 bulk_sample_file='../_2_data_process_for_scTAPE/lung_pseudo_bulk_tpm_5samples.txt'
-gene_len_file='./GeneLength.txt'
+gene_len_file='../_2_data_process_for_scTAPE/GeneLength.txt'
 true_proportion_file='../_2_data_process_for_scTAPE/lung_pseudo_sample_prop_5samples.csv'
 true_proportion = pd.read_csv(true_proportion_file, index_col='Unnamed: 0')
 
