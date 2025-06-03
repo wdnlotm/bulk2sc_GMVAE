@@ -21,18 +21,7 @@ import random
 from tqdm import tqdm
 from torch.utils.tensorboard import SummaryWriter
 
-# sys.path.insert(1, model_location)
-
-# from model_functions.GMVAE_scrna_zinb import GMVAE_ZINB
-# from model_functions.GMVAE_losses_zinb import *
-# from model_functions.GMVAE_utils import train as gmvae_train
-
-# sys.path.insert(1, '/home/mbt8hz/scRNA_GMVAE/_zinb_scRNA_GMVAE_core/')
 sys.path.insert(1, '../_model_source_codes/')
-
-# from model_functions.GMVAE_scrna_zinb import GMVAE_ZINB
-# from model_functions.GMVAE_losses_zinb import *
-# from model_functions.GMVAE_utils import train as gmvae_train
 
 from GMVAE_scrna_zinb import GMVAE_ZINB
 from GMVAE_losses_zinb import *
