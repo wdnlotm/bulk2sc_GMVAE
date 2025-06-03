@@ -84,7 +84,7 @@ cluster_2_remove = list(cluster_cell_count.index[cluster_cell_count['count']<min
 
 adata = adata[ ~ adata.obs["leiden"].isin( cluster_2_remove )] 
 
-sc.pl.umap(adata, color=["leiden"], alpha=0.5, palette=color_dict, save='_with_leiden.png')
+sc.pl.umap(adata, color=["leiden"], alpha=0.5, palette=color_dict, save='_with_leiden.png', show=False)
 
 leiden_clusters=pd.DataFrame(adata.obs["leiden"])
 leiden_clusters['training']=1
