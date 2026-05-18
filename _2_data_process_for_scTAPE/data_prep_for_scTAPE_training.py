@@ -74,6 +74,37 @@ celltype_counts_df=celltype_counts_df.set_index('partition')
 celltype_counts_df.index.name = ''
 celltype_counts_df.to_csv("lung_data_to_train_scTAPE_from_lung_train.txt", sep="\t", index=True)
 
+size_median=int(celltype_counts_df.shape[0]/3)
+np.random.seed(123)
+random_sample_size = np.random.randint(size_median, int(size_median*1.2), num_of_pbsample)
+
+
+for ii in range(num_of_pbsample):
+    counts_df_sample=celltype_counts_df.sample(random_sample_size[ii], random_state=123)
+    counts_df_sample.to_csv(f'sample_4_pseudo_bulk{ii}.csv', index=True)
+    
+bulk_sample=pd.DataFrame()
+for ii in range(num_of_pbsample):
+    sample_temp=pd.read_csv(f'sample_4_pseudo_bulk{ii}.csv')
+    sample_temp=sample_temp.iloc[:,1:sample_temp.shape[1]]
+    pseudo_bulk=pd.DataFrame((sample_temp.sum(axis=0)))
+    pseudo_bulk=pseudo_bulk.T
+    pseudo_bulk=pseudo_bulk.rename(index={0:f'sample{ii}'})
+    bulk_sample=pd.concat([bulk_sample,pseudo_bulk],axis=0)
+    
+bulk_TPM_data=counts2TPM(bulk_sample, './GeneLength.txt')
+
+bulk_TPM_data.to_csv(f'lung_pseudo_bulk_tpm_{num_of_pbsample}samples.txt', index=True, sep='\t')
+
+pseudo_sample_prop = pd.DataFrame()
+for ii in range(num_of_pbsample):
+    sample_temp=pd.read_csv(f'sample_4_pseudo_bulk{ii}.csv', index_col=0)
+    sample_temp_prop=pd.DataFrame(sample_temp.index.value_counts()).sort_index()/sample_temp.shape[0]
+    sample_temp_prop=sample_temp_prop.T.rename(index={'count': f'sample{ii}'})
+    pseudo_sample_prop=pd.concat([pseudo_sample_prop, sample_temp_prop], axis=0)
+    
+pseudo_sample_prop.to_csv(f"lung_pseudo_sample_prop_{num_of_pbsample}samples.csv", index=True)
+
 del adata, cluster_df, celltype_counts_df
 
 data_dir='../_1_data_process_for_GMVAE/test/'
@@ -111,34 +142,3 @@ celltype_counts_df = pd.concat([cluster_df, counts_df], axis=1)
 celltype_counts_df=celltype_counts_df.set_index('partition')
 celltype_counts_df.index.name = ''
 celltype_counts_df.to_csv("lung_data_to_train_scTAPE_from_lung_test.txt", sep="\t", index=True)
-
-size_median=int(celltype_counts_df.shape[0]/3)
-np.random.seed(123)
-random_sample_size = np.random.randint(size_median, int(size_median*1.2), num_of_pbsample)
-
-
-for ii in range(num_of_pbsample):
-    counts_df_sample=celltype_counts_df.sample(random_sample_size[ii], random_state=123)
-    counts_df_sample.to_csv(f'sample_4_pseudo_bulk{ii}.csv', index=True)
-    
-bulk_sample=pd.DataFrame()
-for ii in range(num_of_pbsample):
-    sample_temp=pd.read_csv(f'sample_4_pseudo_bulk{ii}.csv')
-    sample_temp=sample_temp.iloc[:,1:sample_temp.shape[1]]
-    pseudo_bulk=pd.DataFrame((sample_temp.sum(axis=0)))
-    pseudo_bulk=pseudo_bulk.T
-    pseudo_bulk=pseudo_bulk.rename(index={0:f'sample{ii}'})
-    bulk_sample=pd.concat([bulk_sample,pseudo_bulk],axis=0)
-    
-bulk_TPM_data=counts2TPM(bulk_sample, './GeneLength.txt')
-
-bulk_TPM_data.to_csv(f'lung_pseudo_bulk_tpm_{num_of_pbsample}samples.txt', index=True, sep='\t')
-
-pseudo_sample_prop = pd.DataFrame()
-for ii in range(num_of_pbsample):
-    sample_temp=pd.read_csv(f'sample_4_pseudo_bulk{ii}.csv', index_col=0)
-    sample_temp_prop=pd.DataFrame(sample_temp.index.value_counts()).sort_index()/sample_temp.shape[0]
-    sample_temp_prop=sample_temp_prop.T.rename(index={'count': f'sample{ii}'})
-    pseudo_sample_prop=pd.concat([pseudo_sample_prop, sample_temp_prop], axis=0)
-    
-pseudo_sample_prop.to_csv(f"lung_pseudo_sample_prop_{num_of_pbsample}samples.csv", index=True)
