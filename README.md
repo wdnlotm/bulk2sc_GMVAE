@@ -1,5 +1,5 @@
 # bulk2sc_GMVAE
-The `bulk2sc` model is a machine learning tool based on a Gaussian mixture variational autoencoder (GMVAE) that generates single-cell RNA sequencing (scRNA-seq) data from bulk RNA sequencing (bulk RNA-seq) data. The purpose of this repository is to demonstrate the operation of `bulk2sc` and to reproduce the results in a journal paper ([Link to PLOS Comp Bio](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1014979))  for the scRNA-seq dataset [GSE130148](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE130148).
+The `bulk2sc` model is a machine learning framework based on a Gaussian Mixture Variational Autoencoder (GMVAE) that generates single-cell RNA sequencing (scRNA-seq) profiles from bulk RNA sequencing (bulk RNA-seq) data. This repository demonstrates how to use bulk2sc and provides the resources needed to reproduce the results reported in the corresponding PLOS Computational Biology publication ([Link to PLOS Comp Bio](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1014979)) using the scRNA-seq dataset [GSE130148](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE130148).
 #### Fig.1 Model schematic diagram
 <img src="fig/scRNAGMVAE.png" width="60%" alt="Image description">
 
